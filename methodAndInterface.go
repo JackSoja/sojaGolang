@@ -42,7 +42,7 @@ func (car Car) beep() {
 }
 /* 实现接口方法 */
 func (car Car) drive(driver string)  {
-	fmt.Printf("%v drives car %v", driver, car.id)
+	fmt.Printf("%v drives car %v\n", driver, car.id)
 }
 
 func Method()  {
@@ -58,7 +58,19 @@ func Interface()  {
 	ic2.drive("bob")
 }
 
+//空接口可以作为任何类型使用
+type AnyThing interface{
+
+}
+
+
 func main()  {
 	Method()
 	Interface()
+	// 测试空接口, 模拟泛型
+	var a1 AnyThing = "abc"
+	fmt.Println(a1)
+	a1 = 123
+	fmt.Println(a1)
+
 }
