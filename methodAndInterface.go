@@ -4,8 +4,6 @@ import "fmt"
 
 
 
-
-
 /*
 结构体
 
@@ -70,6 +68,7 @@ func main()  {
 	// 测试空接口, 模拟泛型
 	var a1 AnyThing = "abc"
 	fmt.Println(a1)
+	// a1 可以被再次赋值为其他类型
 	a1 = 123
 	fmt.Println(a1)
 
